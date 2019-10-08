@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" integrity="sha256-7VVaJ5GDwFQiLIc+eNksQLUSSY5JNZtqv9o2BI8UGYg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+
+</head>
+<body>
+<header class="page-header">
+    <div class="container header-container"><a href="#" class="logo"><img src="img/logo.png" alt="company logo" width="200"></a>
+        <button class="button create-visit">Записаться на визит</button>
+    </div>
+</header>
+<main class="main-visit-board">
+    <div class="container">
+        <div class="board-container">
+            <div class="no-visit">Вы еще не записаны ни к одному врачу</div>
+            </div>
+        </div>
+</main>
+<form  action="#" class="modal">
+    <i class='fas fa-times cross'></i>
+    <select class="select"  name="doctor" id="visit-type">
+        <option name="cardiologist" value="кардиолог">Кардиолог</option>
+        <option name="dentist" value="стоматолог">Стоматолог</option>
+        <option name="therapist" value="терапевт">Терапевт</option>
+    </select>
+
+    <input id = "fullname-input" class='input field-for-doctors' type="text"  placeholder="ФИО" required />
+    <input id = "target-input" class='input field-for-doctors' type="text"  placeholder= "Цель визита" required />
+    <label class="label field-for-doctors" for="next-visit-input" id="label-for-next-visit">Дата планируемого визита:<input id = "next-visit-input"  class='input field-for-doctors' type="date" required /></label>
+    <input id = "illness-input" class='input field-for-doctors' type="text" placeholder="Перенесенные болезни" required />
+    <label class="label field-for-doctors" for="last-visit-input" id="label-for-last-visit">Дата последнего визита: <input id = "last-visit-input"  class='input field-for-doctors' type="date" required /></label>
+    <input id = "weight-input" class='input field-for-doctors' type="number" placeholder="Индекс массы тела" required />
+    <input id = "age-input" class='input field-for-doctors' type="number" placeholder="Возраст" required />
+    <input id = "pressure-input" class='input field-for-doctors' type="text" placeholder="Ваше давление" required />
+    <input id = "comment-input" class='input field-for-doctors' type="text" placeholder="Ваши комментарии" required maxlength="400" />
+    <input class="button btn-modal field-for-doctors" type="submit" value="Создать визит">
+
+</form>
+
+
+
+</body>
+</html>

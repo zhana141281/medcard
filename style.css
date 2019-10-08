@@ -1,0 +1,201 @@
+/**
+ * Created on 14.08.2019.
+ */
+
+html{
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+*, :after, :before{
+    box-sizing: inherit;
+}
+body{
+    color: #323f3f;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+.container {
+    max-width: 1160px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+}
+/**
+ * Created on 14.08.2019.
+ */
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo:link,
+.logo:visited{
+    text-decoration: none;
+    margin: 15px 100px 15px 0;
+}
+.button{
+    border: 2px solid #4acacb;
+    border-radius: 5px;
+    color: #4acacb;
+    font-size: 18px;
+    padding: 15px 25px;
+    background-color: transparent;
+    font-weight: 700;
+    cursor: pointer;
+}
+.button:hover,
+.button:active{
+    background-color:#4acacb;
+    color: #fff;
+}
+
+.board-container {
+    padding: 15px 25px;
+    min-height: 500px;
+    background-color:#f2f7f7;
+    border: 2px solid #4acacb;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    grid-template-rows: auto;
+    align-items: start;
+    grid-gap: 20px;
+    position: relative;
+}
+.board-container.over {
+    border: 2px dashed #4acacb;
+}
+.no-visit {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight: bold;
+    display: none;
+}
+.visiting-card {
+    width: 250px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid #ff955f;
+    padding: 15px 15px 50px;
+    position: relative;
+    word-wrap: break-word;
+    cursor: move;
+}
+.show-more {
+    width: 80%;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    border: 1px solid #ff955f;
+    background-color: #ff955f;
+    color: #ffffff;
+    font-size: 13px;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding: 7px 20px;
+    cursor: pointer;
+
+}
+.show-more:hover,
+.show-more:active{
+    color: #ff955f;
+    border-color: #ff955f;
+    background-color: white;
+}
+.close {
+    font-size: 24px;
+    color: #ff955f;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+}
+.patient-information{
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    grid-gap: 10px;
+    padding-bottom: 10px;
+}
+.name-of-field {
+    padding: 5px 0;
+    font-weight: lighter;
+    color:#687d7d;
+}
+[draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    /* Required to make elements draggable in old WebKit */
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
+}
+
+.modal {
+    position: fixed;
+    top: 8%;
+    left: 33%;
+    width: 30%;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(74, 202, 203, 0.5);
+    padding: 1%;
+    text-align: center;
+    color: #323f3f;
+    background-color: rgba(242, 247, 247, 1);
+    display: none;
+    z-index:11;
+}
+.select, .input {
+    color: #323f3f;
+    display: block;
+    box-sizing: border-box;
+    width: 90%;
+    border:none;
+    margin: 2.5%;
+    box-shadow:0 0 4px 0 rgba(74, 202, 203, 0.5);
+    padding: 2%;
+}
+.active{
+    display: block;
+}
+.input::placeholder {
+    color: rgba(50, 63, 63, 0.6);;
+}
+
+.label {
+    color: #009a95;
+}
+
+.button{
+    border: 2px solid #4acacb;
+    border-radius: 5px;
+    color: #4acacb;
+    font-size: 18px;
+    padding: 15px 25px;
+    background-color: transparent;
+    font-weight: 700;
+}
+.btn-modal {
+    margin-top: 5%;
+    font-size: 16px;
+    padding: 12px 35px;
+    background-color: white;
+}
+.cross {
+    margin-left: 97%;
+    display: inline-block;
+    color: rgba(74, 202, 203, 0.5);
+    font-size: 17px;
+    cursor: pointer;
+}
+.cross:hover {
+    color: #4acacb;
+}
